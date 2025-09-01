@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+
+# VS Code extension specific files
+.vscode-test/
+.vscode-test-web/
+out/
+dist/
+build/
+coverage/
+.vsix/
+*.vsix
+
+# TypeScript/JavaScript build artifacts
+*.js
+*.js.map
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment variables (if applicable)
+.env
+
+# Editor specific files
+.vscode/*.code-workspace
+.vscode/*.log
