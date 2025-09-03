@@ -16,11 +16,17 @@ export class ComponentSnippetProvider implements vscode.CompletionItemProvider {
     }
     const parentDir = path.dirname(filePath);
     const componentName = path.basename(parentDir);
-    if (
-      !componentName ||
-      componentName === "components" ||
-      componentName === "src"
-    ) {
+
+    const blockedNames = [
+      "src",
+      "components",
+      "templates",
+      "pages",
+      "layout",
+      "hooks",
+    ];
+
+    if (!componentName || blockedNames.includes(componentName)) {
       return [];
     }
 
